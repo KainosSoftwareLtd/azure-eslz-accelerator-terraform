@@ -35,16 +35,16 @@ module "enterprise_scale" {
       parent_management_group_id = "${var.root_id}-landing-zones"
       subscription_ids           = []
       archetype_config = {
-      archetype_id   = "customer_online"
-      parameters     = {
-        Deny-Resource-Locations = {
-          listOfAllowedLocations = ["westeurope",]
+        archetype_id = "customer_online"
+        parameters = {
+          Deny-Resource-Locations = {
+            listOfAllowedLocations = ["westeurope", ]
+          }
+          Deny-RSG-Locations = {
+            listOfAllowedLocations = ["westeurope", ]
+          }
         }
-        Deny-RSG-Locations = {
-          listOfAllowedLocations = ["westeurope",]
-        }
-      }
-      access_control = {}
+        access_control = {}
       }
     }
   }
