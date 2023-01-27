@@ -52,6 +52,6 @@ module "enterprise_scale" {
 
   # Deploy Connectivity Resources
   deploy_connectivity_resources = true
-  subscription_id_connectivity  = data.azurerm_client_config.connectivity.subscription_id
+  subscription_id_connectivity  = data.azurerm_subscription.connectivity.subscription_id
 
 }
