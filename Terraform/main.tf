@@ -15,4 +15,7 @@ module "enterprise_scale" {
   root_id        = "alztf"
   root_name      = "ALZ Terraform"
 
+  #Deploy Demo Landing Zone Archetypes
+  deploy_demo_landing_zones = true
+
 }
