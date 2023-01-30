@@ -59,6 +59,7 @@ module "enterprise_scale" {
   subscription_id_identity  = data.azurerm_subscription.identity.subscription_id
 
   # Deploy Management Resources
-  deploy_management_resources = true
-  subscription_id_management  = data.azurerm_subscription.management.subscription_id
+  deploy_management_resources    = var.deploy_management_resources
+  subscription_id_management     = data.azurerm_subscription.management.subscription_id
+  configure_management_resources = local.configure_management_resources
 }
