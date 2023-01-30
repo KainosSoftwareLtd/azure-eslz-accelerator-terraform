@@ -1,0 +1,24 @@
+{
+    "name": "9312A6B6-8508-40A2-BC17-9AF93A970197",
+    "type": "Microsoft.Authorization/roleDefinitions",
+    "apiVersion": "2018-01-01-preview",
+    "properties": {
+        "roleName": "Reader-Support-Tickets",
+        "description": "View everything in the subscription and also open support tickets.",
+        "type": "customRole",
+        "permissions": [
+            {
+                "actions": [
+                    "*/read",
+                    "Microsoft.Support/*"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ],
+        "assignableScopes": [
+            "${current_scope_resource_id}"
+        ]
+    }
+}
