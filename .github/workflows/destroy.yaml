@@ -58,4 +58,4 @@ jobs:
       
       - name: Terraform destroy
         id: destroy
-        run: terraform destroy -auto-approve
+        run: terraform destroy -auto-approve -var-file="./tfvars/custom_vars.tfvars"

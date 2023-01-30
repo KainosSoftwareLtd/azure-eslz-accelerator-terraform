@@ -41,7 +41,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan -no-color -var-file="./tfvars/custom_vars.tfvars"
         continue-on-error: true
 
   terraform_apply:
