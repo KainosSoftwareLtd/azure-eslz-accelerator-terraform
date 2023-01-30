@@ -6,6 +6,7 @@
       "role_definitions": [],
       "archetype_config": {
         "access_control": {
+          "[ALZ Terraform] Reader-Support-Tickets": ["9312A6B6-8508-40A2-BC17-9AF93A970197"]
         }
       }
     }
