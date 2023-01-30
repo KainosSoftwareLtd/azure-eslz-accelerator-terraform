@@ -56,5 +56,5 @@ module "enterprise_scale" {
 
   # Deploy Identity Resources
   deploy_identity_resources = true
-  
+  subscription_id_identity  = data.azurerm_subscription.identity.subscription_id
 }
