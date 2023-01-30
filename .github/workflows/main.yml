@@ -37,11 +37,11 @@ jobs:
 
       - name: Terraform Validate
         id: validate
-        run: terraform validate -no-color
+        run: terraform validate
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color -var-file="./tfvars/custom_vars.tfvars"
+        run: terraform plan -var-file="./tfvars/custom_vars.tfvars"
         continue-on-error: true
 
   terraform_apply:
