@@ -29,7 +29,7 @@ variable "security_alerts_email_address" {
 
 variable "management_resources_location" {
   type    = string
-  default = "ukswouth"
+  default = "uksouth"
 }
 
 variable "management_resources_tags" {
