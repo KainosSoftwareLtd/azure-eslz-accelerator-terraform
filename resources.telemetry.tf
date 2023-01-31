@@ -18,7 +18,7 @@ resource "azurerm_subscription_template_deployment" "telemetry_core" {
 # It is deployed to the management subscription
 resource "azurerm_subscription_template_deployment" "telemetry_management" {
   count            = local.telem_management_deployment_enabled ? 1 : 0
-  provider         = azurerm.management
+  provider         = azurerm
   name             = local.telem_management_arm_deployment_name
   location         = local.default_location
   template_content = local.telem_arm_subscription_template_content
@@ -28,7 +28,7 @@ resource "azurerm_subscription_template_deployment" "telemetry_management" {
 # It is deployed to the connectivity subscription
 resource "azurerm_subscription_template_deployment" "telemetry_connectivity" {
   count            = local.telem_connectivity_deployment_enabled ? 1 : 0
-  provider         = azurerm.connectivity
+  provider         = azurerm
   name             = local.telem_connectivity_arm_deployment_name
   location         = local.default_location
   template_content = local.telem_arm_subscription_template_content

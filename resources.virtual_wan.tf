@@ -1,7 +1,7 @@
 resource "azurerm_resource_group" "virtual_wan" {
   for_each = local.azurerm_resource_group_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name     = each.value.template.name
@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "virtual_wan" {
 resource "azurerm_virtual_wan" "virtual_wan" {
   for_each = local.azurerm_virtual_wan_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -37,7 +37,7 @@ resource "azurerm_virtual_wan" "virtual_wan" {
 resource "azurerm_virtual_hub" "virtual_wan" {
   for_each = local.azurerm_virtual_hub_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -72,7 +72,7 @@ resource "azurerm_virtual_hub" "virtual_wan" {
 resource "azurerm_express_route_gateway" "virtual_wan" {
   for_each = local.azurerm_express_route_gateway_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -97,7 +97,7 @@ resource "azurerm_express_route_gateway" "virtual_wan" {
 resource "azurerm_vpn_gateway" "virtual_wan" {
   for_each = local.azurerm_vpn_gateway_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -146,7 +146,7 @@ resource "azurerm_vpn_gateway" "virtual_wan" {
 resource "azurerm_firewall_policy" "virtual_wan" {
   for_each = local.azurerm_firewall_policy_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -251,7 +251,7 @@ resource "azurerm_firewall_policy" "virtual_wan" {
 resource "azurerm_firewall" "virtual_wan" {
   for_each = local.azurerm_firewall_virtual_wan
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                = each.value.template.name
@@ -315,7 +315,7 @@ resource "azurerm_firewall" "virtual_wan" {
 resource "azurerm_virtual_hub_connection" "virtual_wan" {
   for_each = local.azurerm_virtual_hub_connection
 
-  provider = azurerm.connectivity
+  # provider = azurerm.connectivity
 
   # Mandatory resource attributes
   name                      = each.value.template.name

@@ -665,7 +665,7 @@ variable "subscription_id_overrides" {
 variable "subscription_id_connectivity" {
   type        = string
   description = "If specified, identifies the Platform subscription for \"Connectivity\" for resource deployment and correct placement in the Management Group hierarchy."
-  default     = ""
+  default     = "b1cdc9c0-de05-4c7b-b29c-6dcf7e815a8b"
 
   validation {
     condition     = can(regex("^[a-z0-9-]{36}$", var.subscription_id_connectivity)) || var.subscription_id_connectivity == ""
@@ -676,7 +676,7 @@ variable "subscription_id_connectivity" {
 variable "subscription_id_identity" {
   type        = string
   description = "If specified, identifies the Platform subscription for \"Identity\" for resource deployment and correct placement in the Management Group hierarchy."
-  default     = ""
+  default     = "f7ceb774-15e9-46ec-a0ca-b73607c07572"
 
   validation {
     condition     = can(regex("^[a-z0-9-]{36}$", var.subscription_id_identity)) || var.subscription_id_identity == ""
@@ -687,7 +687,7 @@ variable "subscription_id_identity" {
 variable "subscription_id_management" {
   type        = string
   description = "If specified, identifies the Platform subscription for \"Management\" for resource deployment and correct placement in the Management Group hierarchy."
-  default     = ""
+  default     = "bee53a59-8c39-4831-b113-d66083fd6237"
 
   validation {
     condition     = can(regex("^[a-z0-9-]{36}$", var.subscription_id_management)) || var.subscription_id_management == ""
