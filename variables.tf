@@ -69,7 +69,7 @@ variable "deploy_demo_landing_zones" {
 variable "deploy_management_resources" {
   type        = bool
   description = "If set to true, will enable the \"Management\" landing zone settings and add \"Management\" resources into the current Subscription context."
-  default     = false
+  default     = true
 }
 
 variable "configure_management_resources" {
@@ -158,7 +158,7 @@ variable "configure_management_resources" {
 variable "deploy_identity_resources" {
   type        = bool
   description = "If set to true, will enable the \"Identity\" landing zone settings."
-  default     = false
+  default     = true
 }
 
 variable "configure_identity_resources" {
@@ -194,7 +194,7 @@ variable "configure_identity_resources" {
 variable "deploy_connectivity_resources" {
   type        = bool
   description = "If set to true, will enable the \"Connectivity\" landing zone settings and add \"Connectivity\" resources into the current Subscription context."
-  default     = false
+  default     = true
 }
 
 # Notes for the `configure_connectivity_resources` variable:
