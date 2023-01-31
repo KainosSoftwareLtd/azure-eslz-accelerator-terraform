@@ -46,7 +46,7 @@ variable "deploy_connectivity_resources" {
 
 variable "connectivity_resources_location" {
   type    = string
-  default = "westeurope"
+  default = "uksouth"
 }
 
 variable "connectivity_resources_tags" {
