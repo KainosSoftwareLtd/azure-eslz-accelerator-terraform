@@ -50,9 +50,10 @@ module "enterprise_scale" {
     }
   }
 
-  # Deploy Connectivity Resources - 
-  # deploy_connectivity_resources = true
-  # subscription_id_connectivity  = data.azurerm_subscription.connectivity.subscription_id
+  # Deploy Connectivity Resources
+  deploy_connectivity_resources    = var.deploy_connectivity_resources
+  subscription_id_connectivity     = data.azurerm_subscription.connectivity.subscription_id
+  configure_connectivity_resources = local.configure_connectivity_resources
 
   # Deploy Identity Resources
   deploy_identity_resources = true

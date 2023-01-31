@@ -1,7 +1,7 @@
 data "azurerm_client_config" "core" {}
 
 data "azurerm_subscription" "connectivity" {
-  subscription_id = "d3c84026-e4b6-43a0-9761-00aebdd4f0ed" #ALZ-Connectivity–MPN
+  subscription_id = "b1cdc9c0-de05-4c7b-b29c-6dcf7e815a8b" #ALZ-Connectivity–MPN
 }
 
 
