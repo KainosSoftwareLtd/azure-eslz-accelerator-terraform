@@ -17,7 +17,7 @@ variable "root_parent_id" {
 variable "root_id" {
   type        = string
   description = "If specified, will set a custom Name (ID) value for the Enterprise-scale \"root\" Management Group, and append this to the ID for all core Enterprise-scale Management Groups."
-  default     = "es"
+  default     = "alztf"
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9-]{2,10}$", var.root_id))
@@ -28,7 +28,7 @@ variable "root_id" {
 variable "root_name" {
   type        = string
   description = "If specified, will set a custom Display Name value for the Enterprise-scale \"root\" Management Group."
-  default     = "Enterprise-Scale"
+  default     = "ALZ Terraform"
 
   validation {
     condition     = can(regex("^[A-Za-z][A-Za-z0-9- ._]{1,22}[A-Za-z0-9]?$", var.root_name))
