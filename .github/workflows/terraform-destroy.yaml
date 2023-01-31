@@ -47,7 +47,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: "./Terraform"
+        working-directory: "./"
     steps:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
