@@ -3,15 +3,15 @@ data "azurerm_client_config" "core" {
 }
 
 data "azurerm_subscription" "connectivity" {
-  provider = azirerm.connectivity
+  provider = azurerm.connectivity
 
 }
 
 data "azurerm_subscription" "identity" {
-  provider = azirerm.identity
+  provider = azurerm.identity
 }
 
 data "azurerm_subscription" "management" {
-  provider = azirerm.management
+  provider = azurerm.management
 
 }
