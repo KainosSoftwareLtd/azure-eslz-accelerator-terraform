@@ -1,6 +1,6 @@
 provider "azurerm" {
   features {}
-  //subscription_id = "648b9e67-6f78-4ae2-b729-c2466fd0a8e2" //ALZ-Corp-MPN
+  subscription_id = "648b9e67-6f78-4ae2-b729-c2466fd0a8e2" //ALZ-Corp-MPN
 }
 
 provider "azurerm" {
