@@ -194,7 +194,7 @@ variable "configure_identity_resources" {
 variable "deploy_connectivity_resources" {
   type        = bool
   description = "If set to true, will enable the \"Connectivity\" landing zone settings and add \"Connectivity\" resources into the current Subscription context."
-  default     = true
+  default     = false
 }
 
 # Notes for the `configure_connectivity_resources` variable:
