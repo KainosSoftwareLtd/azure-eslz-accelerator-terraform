@@ -34,7 +34,7 @@ variable "security_alerts_email_address" {
 
 variable "management_resources_location" {
   type    = string
-  default = "uksouth"
+  default = "westeurope"
 }
 
 variable "management_resources_tags" {
