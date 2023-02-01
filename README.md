@@ -1,1 +1,0 @@
-# azure-eslz-accelerator-terraform
