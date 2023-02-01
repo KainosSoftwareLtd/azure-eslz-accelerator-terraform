@@ -43,7 +43,7 @@ locals {
     tags     = var.management_resources_tags
     advanced = null
   }
-  
+
   // Conectivity resources
   configure_connectivity_resources = {
     settings = {
