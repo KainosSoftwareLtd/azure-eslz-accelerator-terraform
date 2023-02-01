@@ -65,8 +65,7 @@ module "enterprise_scale" {
   deploy_identity_resources    = var.deploy_identity_resources
   configure_identity_resources = local.configure_identity_resources
 
-  # # Deploy Management Resources
-  # deploy_management_resources    = var.deploy_management_resources
-  # subscription_id_management     = data.azurerm_subscription.management.subscription_id
-  # configure_management_resources = local.configure_management_resources
+  # Deploy Management Resources
+  deploy_management_resources    = var.deploy_management_resources
+  configure_management_resources = local.configure_management_resources
 }
