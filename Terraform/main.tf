@@ -21,7 +21,7 @@ module "enterprise_scale" {
   subscription_id_management   = data.azurerm_client_config.management.subscription_id
   subscription_id_connectivity = data.azurerm_client_config.connectivity.subscription_id
   subscription_id_identity     = data.azurerm_client_config.identity.subscription_id
-  library_path   = "${path.root}/lib"
+  library_path                 = "${path.root}/lib"
 
   # Deploy Demo Landing Zone Archetypes
   deploy_demo_landing_zones = true
@@ -62,8 +62,8 @@ module "enterprise_scale" {
   configure_connectivity_resources = local.configure_connectivity_resources
 
   # # Deploy Identity Resources
-  # deploy_identity_resources = true
-  # subscription_id_identity  = data.azurerm_subscription.identity.subscription_id
+  deploy_identity_resources    = var.deploy_identity_resources
+  configure_identity_resources = local.configure_identity_resources
 
   # # Deploy Management Resources
   # deploy_management_resources    = var.deploy_management_resources

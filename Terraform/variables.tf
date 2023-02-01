@@ -12,6 +12,11 @@ variable "default_location" {
   type = string
 }
 
+variable "deploy_identity_resources" {
+  type    = bool
+  default = true
+}
+
 # variable "deploy_management_resources" {
 #   type    = bool
 #   default = true
