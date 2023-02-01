@@ -721,7 +721,7 @@ variable "template_file_variables" {
 variable "default_location" {
   type        = string
   description = "If specified, will set the Azure region in which region bound resources will be deployed. Please see: https://azure.microsoft.com/en-gb/global-infrastructure/geographies/"
-  default     = "eastus"
+  default     = "westeurope"
 }
 
 variable "default_tags" {
