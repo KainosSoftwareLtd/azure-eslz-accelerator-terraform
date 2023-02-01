@@ -8,11 +8,6 @@ variable "root_name" {
   default = "ALZ Terraform"
 }
 
-variable "default_location" {
-  type = string
-  default = "westeurope"
-}
-
 # variable "deploy_management_resources" {
 #   type    = bool
 #   default = true

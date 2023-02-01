@@ -11,9 +11,16 @@ module "enterprise_scale" {
     azurerm.management   = azurerm
   }
 
-  root_parent_id = data.azurerm_client_config.core.tenant_id
-  root_id        = var.root_id
-  root_name      = var.root_name
+  root_parent_id   = data.azurerm_client_config.core.tenant_id
+  root_id          = var.root_id
+  root_name        = var.root_name
+  default_location = "westeurope"
+
+  // Set subscription IDs for placement of platform subs
+  subscription_id_management   = data.azurerm_client_config.management.subscription_id
+  subscription_id_connectivity = data.azurerm_client_config.connectivity.subscription_id
+  subscription_id_identity     = data.azurerm_client_config.identity.subscription_id
+
   # library_path   = "${path.root}/lib"
 
   # Deploy Demo Landing Zone Archetypes
