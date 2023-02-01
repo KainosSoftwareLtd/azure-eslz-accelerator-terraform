@@ -12,6 +12,11 @@ variable "default_location" {
   type = string
 }
 
+variable "deploy_identity_resources" {
+  type    = bool
+  default = true
+}
+
 variable "deploy_management_resources" {
   type    = bool
   default = true
@@ -29,7 +34,7 @@ variable "security_alerts_email_address" {
 
 variable "management_resources_location" {
   type    = string
-  default = "uksouth"
+  default = "westeurope"
 }
 
 variable "management_resources_tags" {
@@ -46,7 +51,7 @@ variable "deploy_connectivity_resources" {
 
 variable "connectivity_resources_location" {
   type    = string
-  default = "uksouth"
+  default = "westeurope"
 }
 
 variable "connectivity_resources_tags" {

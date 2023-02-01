@@ -43,6 +43,8 @@ locals {
     tags     = var.management_resources_tags
     advanced = null
   }
+
+  // Conectivity resources
   configure_connectivity_resources = {
     settings = {
       hub_networks = [
@@ -56,21 +58,21 @@ locals {
             bgp_community                = ""
             subnets                      = []
             virtual_network_gateway = {
-              enabled = true
-              config = {
-                address_prefix           = "10.100.1.0/24"
-                gateway_sku_expressroute = "ErGw2AZ"
-                gateway_sku_vpn          = ""
-                advanced_vpn_settings = {
-                  enable_bgp                       = null
-                  active_active                    = null
-                  private_ip_address_allocation    = ""
-                  default_local_network_gateway_id = ""
-                  vpn_client_configuration         = []
-                  bgp_settings                     = []
-                  custom_route                     = []
-                }
-              }
+              enabled = false
+              # config = {
+              #   address_prefix           = "10.100.1.0/24"
+              #   gateway_sku_expressroute = "ErGw2AZ"
+              #   gateway_sku_vpn          = ""
+              #   advanced_vpn_settings = {
+              #     enable_bgp                       = null
+              #     active_active                    = null
+              #     private_ip_address_allocation    = ""
+              #     default_local_network_gateway_id = ""
+              #     vpn_client_configuration         = []
+              #     bgp_settings                     = []
+              #     custom_route                     = []
+              #   }
+              # }
             }
             azure_firewall = {
               enabled = true
@@ -105,21 +107,21 @@ locals {
             bgp_community                = ""
             subnets                      = []
             virtual_network_gateway = {
-              enabled = true
-              config = {
-                address_prefix           = "10.101.1.0/24"
-                gateway_sku_expressroute = ""
-                gateway_sku_vpn          = "VpnGw2AZ"
-                advanced_vpn_settings = {
-                  enable_bgp                       = null
-                  active_active                    = null
-                  private_ip_address_allocation    = ""
-                  default_local_network_gateway_id = ""
-                  vpn_client_configuration         = []
-                  bgp_settings                     = []
-                  custom_route                     = []
-                }
-              }
+              enabled = false
+              # config = {
+              #   address_prefix           = "10.101.1.0/24"
+              #   gateway_sku_expressroute = ""
+              #   gateway_sku_vpn          = "VpnGw2AZ"
+              #   advanced_vpn_settings = {
+              #     enable_bgp                       = null
+              #     active_active                    = null
+              #     private_ip_address_allocation    = ""
+              #     default_local_network_gateway_id = ""
+              #     vpn_client_configuration         = []
+              #     bgp_settings                     = []
+              #     custom_route                     = []
+              #   }
+              # }
             }
             azure_firewall = {
               enabled = false
@@ -236,5 +238,20 @@ locals {
     location = var.connectivity_resources_location
     tags     = var.connectivity_resources_tags
     advanced = null
+  }
+
+  // Identity configuration
+  configure_identity_resources = {
+    settings = {
+      identity = {
+        enabled = true
+        config = {
+          enable_deny_public_ip             = true
+          enable_deny_rdp_from_internet     = true
+          enable_deny_subnet_without_nsg    = true
+          enable_deploy_azure_backup_on_vms = false
+        }
+      }
+    }
   }
 }
