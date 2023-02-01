@@ -21,42 +21,41 @@ module "enterprise_scale" {
   subscription_id_management   = data.azurerm_client_config.management.subscription_id
   subscription_id_connectivity = data.azurerm_client_config.connectivity.subscription_id
   subscription_id_identity     = data.azurerm_client_config.identity.subscription_id
-
-  # library_path   = "${path.root}/lib"
+  library_path   = "${path.root}/lib"
 
   # Deploy Demo Landing Zone Archetypes
-  # deploy_demo_landing_zones = true
+  deploy_demo_landing_zones = true
 
   # Custom Landing Zones Archetypes
-  # custom_landing_zones = {
-  #   "${var.root_id}-online-example-1" = {
-  #     display_name               = "${upper(var.root_id)} Online Example 1"
-  #     parent_management_group_id = "${var.root_id}-landing-zones"
-  #     subscription_ids           = []
-  #     archetype_config = {
-  #       archetype_id   = "customer_online"
-  #       parameters     = {}
-  #       access_control = {}
-  #     }
-  #   }
-  #   "${var.root_id}-online-example-2" = {
-  #     display_name               = "${upper(var.root_id)} Online Example 2"
-  #     parent_management_group_id = "${var.root_id}-landing-zones"
-  #     subscription_ids           = []
-  #     archetype_config = {
-  #       archetype_id = "customer_online"
-  #       parameters = {
-  #         Deny-Resource-Locations = {
-  #           listOfAllowedLocations = ["westeurope", ]
-  #         }
-  #         Deny-RSG-Locations = {
-  #           listOfAllowedLocations = ["westeurope", ]
-  #         }
-  #       }
-  #       access_control = {}
-  #     }
-  #   }
-  # }
+  custom_landing_zones = {
+    "${var.root_id}-online-example-1" = {
+      display_name               = "${upper(var.root_id)} Online Example 1"
+      parent_management_group_id = "${var.root_id}-landing-zones"
+      subscription_ids           = []
+      archetype_config = {
+        archetype_id   = "customer_online"
+        parameters     = {}
+        access_control = {}
+      }
+    }
+    "${var.root_id}-online-example-2" = {
+      display_name               = "${upper(var.root_id)} Online Example 2"
+      parent_management_group_id = "${var.root_id}-landing-zones"
+      subscription_ids           = []
+      archetype_config = {
+        archetype_id = "customer_online"
+        parameters = {
+          Deny-Resource-Locations = {
+            listOfAllowedLocations = ["westeurope", ]
+          }
+          Deny-RSG-Locations = {
+            listOfAllowedLocations = ["westeurope", ]
+          }
+        }
+        access_control = {}
+      }
+    }
+  }
 
   # # Deploy Connectivity Resources
   # deploy_connectivity_resources    = var.deploy_connectivity_resources
