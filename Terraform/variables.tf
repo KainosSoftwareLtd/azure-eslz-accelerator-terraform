@@ -39,19 +39,19 @@ variable "default_location" {
 #   }
 # }
 
-# variable "deploy_connectivity_resources" {
-#   type    = bool
-#   default = true
-# }
+variable "deploy_connectivity_resources" {
+  type    = bool
+  default = true
+}
 
-# variable "connectivity_resources_location" {
-#   type    = string
-#   default = "uksouth"
-# }
+variable "connectivity_resources_location" {
+  type    = string
+  default = "westeurope"
+}
 
-# variable "connectivity_resources_tags" {
-#   type = map(string)
-#   default = {
-#     demo_type = "deploy_connectivity_resources_custom"
-#   }
-# }
+variable "connectivity_resources_tags" {
+  type = map(string)
+  default = {
+    demo_type = "deploy_connectivity_resources_custom"
+  }
+}
