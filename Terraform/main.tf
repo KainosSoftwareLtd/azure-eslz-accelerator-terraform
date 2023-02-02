@@ -15,9 +15,9 @@ module "enterprise_scale" {
   # root_parent_id  - root for all Landing Zone deployments, Usually the Tenant ID
   # root_id - a custom Name (ID) value for the Enterprise-scale "root" Management Group, and append this to the ID for all core Enterprise-scale Management Groups.
   # root_name - a custom DisplayName value for the Enterprise-scale "root" Management Group.
-  root_parent_id   = data.azurerm_client_config.core.tenant_id
-  root_id          = var.root_id
-  root_name        = var.root_name
+  root_parent_id = data.azurerm_client_config.core.tenant_id
+  root_id        = var.root_id
+  root_name      = var.root_name
 
   // Default location for resources where specific location was not provided
   default_location = "westeurope"
