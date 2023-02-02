@@ -31,20 +31,20 @@ module "enterprise_scale" {
   library_path = "${path.root}/lib"
 
   // Deploy Demo Landing Zone Archetypes
-  deploy_demo_landing_zones = true
+  # deploy_demo_landing_zones = true
 
   // Deploy Custom Landing Zones configured in locals.tf
   custom_landing_zones = local.custom_landing_zones
 
-  // Deploy Connectivity Resources with custom settings configured in locals.tf
-  deploy_connectivity_resources    = var.deploy_connectivity_resources
-  configure_connectivity_resources = local.configure_connectivity_resources
+  # // Deploy Connectivity Resources with custom settings configured in locals.tf
+  # deploy_connectivity_resources    = var.deploy_connectivity_resources
+  # configure_connectivity_resources = local.configure_connectivity_resources
 
-  // Deploy Identity Resources with custom settings configured in locals.tf
-  deploy_identity_resources    = var.deploy_identity_resources
-  configure_identity_resources = local.configure_identity_resources
+  # // Deploy Identity Resources with custom settings configured in locals.tf
+  # deploy_identity_resources    = var.deploy_identity_resources
+  # configure_identity_resources = local.configure_identity_resources
 
-  // Deploy Management Resources with custom settings configured in locals.tf
-  deploy_management_resources    = var.deploy_management_resources
-  configure_management_resources = local.configure_management_resources
+  # // Deploy Management Resources with custom settings configured in locals.tf
+  # deploy_management_resources    = var.deploy_management_resources
+  # configure_management_resources = local.configure_management_resources
 }
