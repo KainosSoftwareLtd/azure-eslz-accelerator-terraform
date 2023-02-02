@@ -23,10 +23,10 @@ module "enterprise_scale" {
   subscription_id_identity     = data.azurerm_client_config.identity.subscription_id
   library_path                 = "${path.root}/lib"
 
-  # Deploy Demo Landing Zone Archetypes
+  // Deploy Demo Landing Zone Archetypes
   deploy_demo_landing_zones = true
 
-  # Custom Landing Zones Archetypes
+  // Custom Landing Zones Archetypes
   custom_landing_zones = {
     "${var.root_id}-online-example-1" = {
       display_name               = "${upper(var.root_id)} Online Example 1"
@@ -57,15 +57,15 @@ module "enterprise_scale" {
     }
   }
 
-  # Deploy Connectivity Resources
+  // Deploy Connectivity Resources
   deploy_connectivity_resources    = var.deploy_connectivity_resources
   configure_connectivity_resources = local.configure_connectivity_resources
 
-  # # Deploy Identity Resources
+  // Deploy Identity Resources
   deploy_identity_resources    = var.deploy_identity_resources
   configure_identity_resources = local.configure_identity_resources
 
-  # Deploy Management Resources
+  // Deploy Management Resources
   deploy_management_resources    = var.deploy_management_resources
   configure_management_resources = local.configure_management_resources
 }
