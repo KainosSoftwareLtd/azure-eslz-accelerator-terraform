@@ -1,7 +1,3 @@
-variable "root_parent_id" {
-  type        = string
-  description = "The root_parent_id is used to specify where to set the root for all Landing Zone deployments. Usually the Tenant ID when deploying the core Enterprise-scale Landing Zones."
-}
 variable "root_id" {
   type        = string
   default     = "alztf"

@@ -57,15 +57,15 @@ module "enterprise_scale" {
     }
   }
 
-  # // Deploy Connectivity Resources
-  # deploy_connectivity_resources    = var.deploy_connectivity_resources
-  # configure_connectivity_resources = local.configure_connectivity_resources
+  // Deploy Connectivity Resources
+  deploy_connectivity_resources    = var.deploy_connectivity_resources
+  configure_connectivity_resources = local.configure_connectivity_resources
 
-  # // Deploy Identity Resources
-  # deploy_identity_resources    = var.deploy_identity_resources
-  # configure_identity_resources = local.configure_identity_resources
+  // Deploy Identity Resources
+  deploy_identity_resources    = var.deploy_identity_resources
+  configure_identity_resources = local.configure_identity_resources
 
-  # // Deploy Management Resources
-  # deploy_management_resources    = var.deploy_management_resources
-  # configure_management_resources = local.configure_management_resources
+  // Deploy Management Resources
+  deploy_management_resources    = var.deploy_management_resources
+  configure_management_resources = local.configure_management_resources
 }
