@@ -2,7 +2,7 @@
 locals {
   // Custom Landing Zones Archetypes
   custom_landing_zones = {
-    "${var.root_id}-online-example-1" = {
+    "${var.root_id}-lob1" = {
       display_name               = "${upper(var.root_id)} LOB 1"
       parent_management_group_id = "${var.root_id}-landing-zones"
       subscription_ids           = []
@@ -12,7 +12,7 @@ locals {
         access_control = {}
       }
     }
-    "${var.root_id}-online-example-2" = {
+    "${var.root_id}-lob2" = {
       display_name               = "${upper(var.root_id)} LOB 2"
       parent_management_group_id = "${var.root_id}-landing-zones"
       subscription_ids           = []
