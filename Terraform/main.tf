@@ -37,14 +37,14 @@ module "enterprise_scale" {
   custom_landing_zones = local.custom_landing_zones
 
   # // Deploy Connectivity Resources with custom settings configured in locals.tf
-  # deploy_connectivity_resources    = var.deploy_connectivity_resources
-  # configure_connectivity_resources = local.configure_connectivity_resources
+  deploy_connectivity_resources    = var.deploy_connectivity_resources
+  configure_connectivity_resources = local.configure_connectivity_resources
 
   # // Deploy Identity Resources with custom settings configured in locals.tf
-  # deploy_identity_resources    = var.deploy_identity_resources
-  # configure_identity_resources = local.configure_identity_resources
+  deploy_identity_resources    = var.deploy_identity_resources
+  configure_identity_resources = local.configure_identity_resources
 
   # // Deploy Management Resources with custom settings configured in locals.tf
-  # deploy_management_resources    = var.deploy_management_resources
-  # configure_management_resources = local.configure_management_resources
+  deploy_management_resources    = var.deploy_management_resources
+  configure_management_resources = local.configure_management_resources
 }
