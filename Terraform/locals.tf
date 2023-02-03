@@ -29,6 +29,16 @@ locals {
         access_control = {}
       }
     }
+    "${var.root_id}-lob3" = {
+      display_name               = "${upper(var.root_id)} LOB 3"
+      parent_management_group_id = "${var.root_id}-landing-zones"
+      subscription_ids           = []
+      archetype_config = {
+        archetype_id   = "default_empty"
+        parameters     = {}
+        access_control = {}
+      }
+    }
   }
 
   // Configure the management resources settings.
